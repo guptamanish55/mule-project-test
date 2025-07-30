@@ -19,7 +19,7 @@ jobs:
       compliance_threshold: 75              # Adjust per project (60-95)
       pmd_version: '7.0.0'                 # PMD version to use
       analysis_target: '.'                 # Directory to analyze (change if needed)
-      project_name: 'Customer API'         # Name of this project
+      # project_name: 'Custom Name'       # Optional: Override auto-detected repository name
       skip_quality_gate: false             # Set to true for debugging
     
   # Optional: Add post-analysis steps
