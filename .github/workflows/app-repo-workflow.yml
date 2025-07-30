@@ -10,7 +10,10 @@ on:
 jobs:
   quality-check:
     name: Run Mule Guardian Analysis
-    uses: guptamanish55/mulesoft-code-review-agent/.github/workflows/mule-guardian-quality-check.yml@main
+    uses: guptamanish55/mulesoft-code-review-agent/edit/main/.github/workflows/mule-guardian-quality-check.yml@main
+    # 👆 CHANGE THIS: Replace YOUR-ORG with your GitHub organization name
+    # 👆 CHANGE THIS: Replace your-common-repo-name with your actual common repository name
+    # Example: mycompany/mulesoft-quality-workflows/.github/workflows/mule-guardian-reusable.yml@main
     with:
       # Customize these parameters for each application repository
       compliance_threshold: 75              # Adjust per project (60-95)
