@@ -21,6 +21,7 @@ jobs:
       analysis_target: '.'                 # Directory to analyze (change if needed)
       # project_name: 'Custom Name'       # Optional: Override auto-detected repository name
       skip_quality_gate: false             # Set to true for debugging
+      require_pmd: true                    # Fail if PMD doesn't work (prevents misleading scores)
     
   # Optional: Add post-analysis steps
   post-analysis:
