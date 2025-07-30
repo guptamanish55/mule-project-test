@@ -10,7 +10,7 @@ on:
 jobs:
   quality-check:
     name: Run Mule Guardian Analysis
-    uses: https://github.com/guptamanish55/mulesoft-code-review-agent/blob/main/.github/workflows/mule-guardian-quality-check.yml@main
+    uses: https://github.com/guptamanish55/mulesoft-code-review-agent/.github/workflows/mule-guardian-quality-check.yml@main
     with:
       # Customize these parameters for each application repository
       compliance_threshold: 75              # Adjust per project (60-95)
