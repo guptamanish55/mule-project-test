@@ -22,6 +22,24 @@ jobs:
       # project_name: 'Custom Name'       # Optional: Override auto-detected repository name
       skip_quality_gate: false             # Set to true for debugging
       require_pmd: true                    # Fail if PMD doesn't work (prevents misleading scores)
+      
+      # NEW: Configurable Compliance Scoring Parameters
+      # Choose one of the following approaches:
+      
+      # OPTION 1: Use a configuration file (Recommended)
+      # config_file: '.github/compliance_config.json'
+      
+      # OPTION 2: Set individual parameters (Match UI Configuration)
+      file_weight: 70          # 70% weight for file-based compliance (matches UI)
+      severity_weight: 30      # 30% weight for severity-based compliance (matches UI)
+      high_weight: 10         # HIGH penalty matching UI (default: 10)
+      medium_weight: 5        # MEDIUM penalty matching UI (default: 5)
+      low_weight: 2           # LOW penalty matching UI (default: 2)
+      info_weight: 1          # INFO penalty matching UI (default: 1)
+      
+      # OPTION 3: Use defaults (just remove the parameters above)
+      # This will use: 70% file-based, 30% severity-based
+      # With weights: HIGH=10, MEDIUM=5, LOW=2, INFO=1
     
   # Optional: Add post-analysis steps
   post-analysis:
